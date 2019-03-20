@@ -1,0 +1,69 @@
+{
+  "name": "vuejs-google-maps",
+  "description": "A set of Google Map components for VueJs",
+  "version": "0.1.3",
+  "license": "MIT",
+  "main": "./dist/VueGoogleMap.umd.js",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/chantouch/vuejs-google-maps",
+  "author": {
+    "name": "chantouch",
+    "email": "chantouchse.cs83@gmail.com",
+    "url": "https://github.com/chantouch/vuejs-google-maps"
+  },
+  "keywords": [
+    "vue",
+    "vue-plugin",
+    "vue-components",
+    "googlemap",
+    "google-map"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --target lib --name VueGoogleMap ./lib/index.js",
+    "build:demo": "vue-cli-service build --mode demo --dest demo",
+    "publish:demo": "git subtree push --prefix demo origin gh-pages",
+    "lint": "vue-cli-service lint ./lib",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.0.0",
+    "lint-staged": "^8.1.3",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.0.1",
+    "terser": "3.14.1",
+    "vue-material": "1.0.0-beta-10.2",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

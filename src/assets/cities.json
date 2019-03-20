@@ -1,0 +1,36 @@
+[{
+  "title": "Faenza",
+  "description": "Faenza is an Italian city and comune, in the province of Ravenna, Emilia-Romagna, situated 50 kilometres southeast of Bologna.",
+  "position": {
+    "lat": 44.2899,
+    "lng": 11.8774
+  }
+}, {
+  "title": "Shenzhen",
+  "description": "Shenzhen, in southeastern China, is a modern metropolis that links Hong Kong to China’s mainland.",
+  "position": {
+    "lat": 22.5431,
+    "lng": 114.0579
+  }
+}, {
+  "title": "Bogotá",
+  "description": "Bogotá is Colombia’s sprawling, high-altitude capital. La Candelaria, its cobblestoned center, features colonial-era landmarks like the neoclassical performance hall Teatro Colón and the 17th-century Iglesia de San Francisco.",
+  "position": {
+    "lat": 4.7110,
+    "lng": -74.063644
+  }
+}, {
+  "title": "Rome",
+  "description": "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display.",
+  "position": {
+    "lat": 41.9028,
+    "lng": 12.4964
+  }
+}, {
+  "title": "Moscow",
+  "description": "Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital. In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury.",
+  "position": {
+    "lat": 55.7558,
+    "lng": 37.6173
+  }
+}]

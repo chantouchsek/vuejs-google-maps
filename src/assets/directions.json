@@ -1,0 +1,13 @@
+[{
+  "origin": "Bologna",
+  "destination": "Roma",
+  "travelMode": "DRIVING"
+}, {
+  "origin": "Milano",
+  "destination": "Torino",
+  "travelMode": "DRIVING"
+}, {
+  "origin": "Bari",
+  "destination": "Crotone",
+  "travelMode": "DRIVING"
+}]
