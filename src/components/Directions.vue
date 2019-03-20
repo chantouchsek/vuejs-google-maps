@@ -11,14 +11,13 @@
         :destination="direction.destination"
         :travel-mode="direction.travelMode"
         @directions-changed="onDirectionsChange"
-        preserve-viewport
-      />
+        preserve-viewport></google-map-directions>
 
     </google-map>
 
     <div class="directions-control">
 
-      <div class="direction-options" v-for="(direction, index) in directionsList">
+      <div class="direction-options" v-for="(direction, index) in directionsList" :key="index">
         <h3>Route Track #{{index + 1}}</h3>
 
         <div class="md-layout md-gutter">
@@ -40,7 +39,7 @@
         <md-field>
           <label for="travel-mode">Travel Mode</label>
           <md-select v-model="direction.travelMode" name="travel-mode">
-            <md-option v-for="mode in travelModes" :value="mode">{{mode}}</md-option>
+            <md-option v-for="mode in travelModes" :key="mode" :value="mode">{{mode}}</md-option>
           </md-select>
         </md-field>
       </div>
