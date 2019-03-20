@@ -9,8 +9,8 @@ This package is under active development, the documentation is not complete yet,
 ## Installation
 
 ```
-npm i @codekraft-studio/vue-google-map
-yarn add @codekraft-studio/vue-google-map
+npm i vuejs-google-maps
+yarn add vuejs-google-maps
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ yarn add @codekraft-studio/vue-google-map
 Before starting you need a Google API key from the [developer console](http://console.developers.google.com/), once you obtained your key, import the module in your application and register it as plugin:
 
 ```js
-import VueGoogleMap from '@codekraft-studio/vue-google-map'
+import VueGoogleMap from 'vuejs-google-maps'
 
 Vue.use(VueGoogleMap, {
   load: {
@@ -106,6 +106,6 @@ VUE_APP_GOOGLE_APIKEY=my-apy-key
 This package is under the [MIT License](LICENSE).
 
 [npm-image]: https://badge.fury.io/js/%40codekraft-studio%2Fvue-google-map.svg
-[npm-url]: https://npmjs.org/package/@codekraft-studio/vue-google-map
+[npm-url]: https://npmjs.org/package/vuejs-google-maps
 [daviddm-image]: https://david-dm.org/codekraft-studio/vue-google-map.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/codekraft-studio/vue-google-map
