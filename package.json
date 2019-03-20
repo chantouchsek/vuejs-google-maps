@@ -1,17 +1,17 @@
 {
   "name": "vuejs-google-maps",
   "description": "A set of Google Map components for VueJs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
-  "main": "./dist/VueGoogleMap.umd.js",
+  "main": "./dist/vuejs-google-maps.umd.js",
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/chantouch/vuejs-google-maps",
+  "homepage": "https://github.com/chantouchsek/vuejs-google-maps",
   "author": {
-    "name": "chantouch",
+    "name": "chantouchsek",
     "email": "chantouchse.cs83@gmail.com",
-    "url": "https://github.com/chantouch/vuejs-google-maps"
+    "url": "https://github.com/chantouchsek/vuejs-google-maps"
   },
   "keywords": [
     "vue",
@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --name VueGoogleMap ./lib/index.js",
+    "build": "vue-cli-service build --target lib --name vuejs-google-maps ./lib/index.js",
     "build:demo": "vue-cli-service build --mode demo --dest demo",
     "publish:demo": "git subtree push --prefix demo origin gh-pages",
     "lint": "vue-cli-service lint ./lib",
