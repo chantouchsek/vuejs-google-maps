@@ -2,9 +2,9 @@
     <md-app id="app" md-mode="fixed">
         <md-app-toolbar class="md-primary">
             <h3 class="md-title" style="flex: 1">
-        <span class="page-icon">
-          <img width="32" height="32" src="./assets/logo.png">
-        </span>
+                <span class="page-icon">
+                  <img width="32" height="32" src="./assets/logo.png" alt="logo">
+                </span>
                 <span>Vue Google Map</span>
             </h3>
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
@@ -14,12 +14,10 @@
 
         <md-app-drawer :md-active.sync="menuVisible" md-right>
             <md-toolbar class="md-transparent" md-elevation="0">
-        <span class="page-icon">
-          <img width="42" height="42" src="./assets/logo.png">
-        </span>
-                <span class="md-headline">Vue Google Map</span>
+                <span class="page-icon">
+                  <img width="32" height="32" src="./assets/logo.png" alt="map">
+                </span><span class="md-headline">Vue Google Map</span>
             </md-toolbar>
-
             <md-list>
                 <md-list-item @click="goTo(route.name)" v-for="route in routes" :key="route.name">
                     <span class="md-list-item-text" v-text="route.label"></span>

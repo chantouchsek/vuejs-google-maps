@@ -2,22 +2,22 @@
   "title": "Faenza",
   "description": "Faenza is an Italian city and comune, in the province of Ravenna, Emilia-Romagna, situated 50 kilometres southeast of Bologna.",
   "position": {
-    "lat": 44.2899,
-    "lng": 11.8774
+    "lat": 34.731943,
+    "lng": 135.731617
   }
 }, {
   "title": "Shenzhen",
   "description": "Shenzhen, in southeastern China, is a modern metropolis that links Hong Kong to China’s mainland.",
   "position": {
-    "lat": 22.5431,
-    "lng": 114.0579
+    "lat": 34.733713,
+    "lng": 135.735292
   }
 }, {
   "title": "Bogotá",
   "description": "Bogotá is Colombia’s sprawling, high-altitude capital. La Candelaria, its cobblestoned center, features colonial-era landmarks like the neoclassical performance hall Teatro Colón and the 17th-century Iglesia de San Francisco.",
   "position": {
-    "lat": 4.7110,
-    "lng": -74.063644
+    "lat": 34.734004,
+    "lng": 135.73660
   }
 }, {
   "title": "Rome",
