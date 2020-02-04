@@ -110,3 +110,4 @@ This package is under the [MIT License](LICENSE).
 [npm-url]: https://npmjs.org/package/vuejs-google-maps
 [daviddm-image]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg
+[example]: https://github.com/chantouchsek/vuejs-google-maps/tree/master/demo
