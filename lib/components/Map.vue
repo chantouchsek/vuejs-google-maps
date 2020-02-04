@@ -1,18 +1,18 @@
 <template>
-  <div class="vue-google-map">
-    <div ref="map" class="map-view"></div>
-    <div class="hidden-content">
-      <slot></slot>
+    <div class="vue-google-map">
+        <div ref="map" class="map-view"></div>
+        <div class="hidden-content">
+            <slot></slot>
+        </div>
+        <slot name="visible"></slot>
     </div>
-    <slot name="visible"></slot>
-  </div>
 </template>
 
 <script>
 import Ready from '../mixins/Ready'
 import BoundProps from '../mixins/BoundProps'
 import Events from '../mixins/Events'
-import { autoCall, assignDefined } from '../utils/misc'
+import { assignDefined, autoCall } from '../utils/misc'
 import { redirectMethods } from '../utils/redirect-methods'
 
 const boundProps = [
@@ -225,19 +225,19 @@ export default {
 </script>
 
 <style lang="css">
-  .vue-google-map {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+    .vue-google-map {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
-  .vue-google-map .map-view {
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
+    .vue-google-map .map-view {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
 
-  .vue-google-map .hidden-content {
-    display: none;
-  }
+    .vue-google-map .hidden-content {
+        display: none;
+    }
 </style>
