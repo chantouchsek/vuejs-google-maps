@@ -83,8 +83,8 @@ The AutoComplete component does not require to be inside a `<google-map>` compon
 ></google-map-autocomplete>
 ```
 
-##Update V0.0.5
-````vuejs
+##### Update V 0.0.6
+````html
 <template lang="html">
   <div class="info-windows">
     <google-map id="map" ref="Map">
