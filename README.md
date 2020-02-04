@@ -1,10 +1,11 @@
-# vue-google-map
+# vuejs-google-map
 
 > Google Map components and integration for VueJs
 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-This package is under active development, the documentation is not complete yet, so if is missing something open a request or look at the [source code](https://github.com/codekraft-studio/vue-google-map).
+This package is under active development, the documentation is not complete yet, so if is missing something open a
+ request or look at the [source code](https://github.com/chantouchsek/vuejs-google-map).
 
 ## Installation
 
@@ -105,7 +106,7 @@ VUE_APP_GOOGLE_APIKEY=my-apy-key
 
 This package is under the [MIT License](LICENSE).
 
-[npm-image]: https://badge.fury.io/js/%40codekraft-studio%2Fvue-google-map.svg
+[npm-image]: https://badge.fury.io/js/vuejs-google-maps.svg
 [npm-url]: https://npmjs.org/package/vuejs-google-maps
-[daviddm-image]: https://david-dm.org/codekraft-studio/vue-google-map.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/codekraft-studio/vue-google-map
+[daviddm-image]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg
