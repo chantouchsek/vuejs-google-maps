@@ -8,10 +8,12 @@
         @click="toggleInfoWindow(infowindow)"
       ></google-map-marker>
       <google-map-infowindow
-              :position="infoWIndowContext.position"
+              v-for="(infowindow, index) in infoWindowsList"
+              :key="`info-window-${index}`"
+              :position="infowindow.position"
               :show.sync="showInfo"
               :options="{maxWidth: 300}"
-              @info-window-clicked="infoClicked"
+              @info-window-clicked="infoClicked($event, infowindow)"
       >
         <h4>{{infoWIndowContext.title}}</h4>
         <p>{{infoWIndowContext.description}}</p>
@@ -40,8 +42,8 @@ export default {
       this.infoWIndowContext = context
       this.showInfo = true
     },
-    infoClicked(context) {
-      console.log(context)
+    infoClicked(context, spot) {
+      console.log(context, spot)
     }
   }
 }
