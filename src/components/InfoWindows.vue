@@ -15,8 +15,8 @@
               :options="{maxWidth: 300}"
               @info-window-clicked="infoClicked($event, infowindow)"
       >
-        <h4>{{infoWIndowContext.title}}</h4>
-        <p>{{infoWIndowContext.description}}</p>
+        <h4 @click="handleClick">{{infoWIndowContext.title}}</h4>
+        <p @click="handleClick">{{infoWIndowContext.description}}</p>
       </google-map-infowindow>
     </google-map>
   </div>
@@ -44,6 +44,9 @@ export default {
     },
     infoClicked(context, spot) {
       console.log(context, spot)
+    },
+    handleClick() {
+      console.log('Event!');
     }
   }
 }
