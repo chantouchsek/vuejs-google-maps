@@ -15,7 +15,7 @@
               :options="{maxWidth: 300}"
               @info-window-clicked="infoClicked($event, infowindow)"
       >
-        <h4>{{infoWIndowContext.title}}</h4>
+        <h4 >{{infoWIndowContext.title}}</h4>
         <p>{{infoWIndowContext.description}}</p>
       </google-map-infowindow>
     </google-map>
@@ -27,8 +27,10 @@ import cities from '../assets/cities.json'
 export default {
   data () {
     return {
-      showInfo: false,
+      showInfo: true,
       infoWIndowContext: {
+        title: 'Hello world',
+        description: 'Description',
         position: {
           lat: 44.2899,
           lng: 11.8774
