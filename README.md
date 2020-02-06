@@ -29,7 +29,7 @@ Vue.use(VueGoogleMap, {
 })
 ```
 
-#Nuxt support
+# Nuxt support
 
 - create a file inside plugins folder
 ``vuejs-google-maps.js``
