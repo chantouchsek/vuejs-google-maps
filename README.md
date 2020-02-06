@@ -19,6 +19,7 @@ yarn add vuejs-google-maps
 Before starting you need a Google API key from the [developer console](http://console.developers.google.com/), once you obtained your key, import the module in your application and register it as plugin:
 
 ```js
+import Vue from 'vue'
 import VueGoogleMap from 'vuejs-google-maps'
 
 Vue.use(VueGoogleMap, {
@@ -36,6 +37,7 @@ Vue.use(VueGoogleMap, {
 
 
 ```js
+import Vue from 'vue'
 import VueGoogleMap from 'vuejs-google-maps'
 
 Vue.use(VueGoogleMap, {
@@ -50,7 +52,7 @@ Vue.use(VueGoogleMap, {
 
 place it inside of plugins section
 
-```html
+```js
 plugins: [
     [...],
     { src: '~/plugins/vuejs-google-maps.js', mode: 'all' }
