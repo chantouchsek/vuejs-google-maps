@@ -29,6 +29,34 @@ Vue.use(VueGoogleMap, {
 })
 ```
 
+#Nuxt support
+
+- create a file inside plugins folder
+``vuejs-google-maps.js``
+
+
+```js
+import VueGoogleMap from 'vuejs-google-maps'
+
+Vue.use(VueGoogleMap, {
+  load: {
+    apiKey: 'your-api-key',
+    libraries: ['...']
+  }
+})
+```
+
+- inside nuxt.config.js
+
+place it inside of plugins section
+
+```html
+plugins: [
+    [...],
+    { src: '~/plugins/vuejs-google-maps.js', mode: 'all' }
+]
+```
+
 This module tries to map GoogleMap with Vue components as much as possible so any of the options available on the original GoogleMap class will be available as component props and all the events emitted will be mapped to component events.
 
 ## Components
