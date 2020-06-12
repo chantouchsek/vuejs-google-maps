@@ -3,6 +3,7 @@
 > Google Map components and integration for VueJs
 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]![npm](https://img.shields.io/npm/dm/vuejs-google-maps?style=flat-square)
+[![npm](https://img.shields.io/npm/dt/vuejs-google-maps.svg?style=flat-square)](https://npmjs.com/package/vuejs-google-maps)
 
 This package is under active development, the documentation is not complete yet, so if is missing something open a
  request or look at the [source code](https://github.com/chantouchsek/vuejs-google-map).
