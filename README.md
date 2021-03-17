@@ -6,7 +6,7 @@
 [![npm](https://img.shields.io/npm/dt/vuejs-google-maps.svg?style=flat-square)](https://npmjs.com/package/vuejs-google-maps)
 
 This package is under active development, the documentation is not complete yet, so if is missing something open a
- request or look at the [source code](https://github.com/chantouchsek/vuejs-google-map).
+request or look at the [source code](https://github.com/chantouchsek/vuejs-google-map).
 
 ## Installation
 
@@ -17,54 +17,48 @@ yarn add vuejs-google-maps
 
 ## Usage
 
-Before starting you need a Google API key from the [developer console](http://console.developers.google.com/), once you obtained your key, import the module in your application and register it as plugin:
+Before starting you need a Google API key from the [developer console](http://console.developers.google.com/), once you
+obtained your key, import the module in your application and register it as plugin:
 
 ```js
 import Vue from 'vue'
 import VueGoogleMap from 'vuejs-google-maps'
 
 Vue.use(VueGoogleMap, {
-  load: {
-    apiKey: 'your-api-key',
-    libraries: ['...']
-  }
+    load: {
+        apiKey: 'your-api-key',
+        libraries: [/* rest of libraries */]
+    }
 })
 ```
 
-# Nuxt support
+## ♻️ Usage with Nuxt.js
 
-- create a file inside plugins folder
-``vuejs-google-maps.js``
-
+Add `vuejs-google-maps/nuxt` to modules section of `nuxt.config.js`
 
 ```js
-import Vue from 'vue'
-import VueGoogleMap from 'vuejs-google-maps'
-
-Vue.use(VueGoogleMap, {
-  load: {
-    apiKey: 'your-api-key',
-    libraries: ['...']
-  }
-})
+export default {
+    modules: [
+        // Simple usage
+        'vuejs-google-maps/nuxt',
+        // Passing options in module configuration
+        ['vuejs-google-maps/nuxt', {api: 'xxxxxx', libraries: [/* rest of libraries */]}]
+    ],
+    // Passing options in module top level configuration
+    googleMaps: {api: 'xxxxxx', libraries: [/* rest of libraries */]}
+}
 ```
 
-- inside nuxt.config.js
-
-place it inside of plugins section
-
-```js
-plugins: [
-    [...],
-    { src: '~/plugins/vuejs-google-maps.js', mode: 'all' }
-]
-```
-
-This module tries to map GoogleMap with Vue components as much as possible so any of the options available on the original GoogleMap class will be available as component props and all the events emitted will be mapped to component events.
+This module tries to map GoogleMap with Vue components as much as possible so any of the options available on the
+original GoogleMap class will be available as component props and all the events emitted will be mapped to component
+events.
 
 ## Components
 
-Here a list of the available components that you can use with this plugin, click on them to discover more about the usage and see examples. If you are interested to see a __real life use__ checkout the [example](https://github.com/chantouchsek/vuejs-google-maps/tree/master/demo) folder which contains the source code of the [website](http://vuejs-google-maps.bookingkh.com/#/).
+Here a list of the available components that you can use with this plugin, click on them to discover more about the
+usage and see examples. If you are interested to see a __real life use__ checkout
+the [example](https://github.com/chantouchsek/vuejs-google-maps/tree/master/demo) folder which contains the source code
+of the [website](http://vuejs-google-maps.bookingkh.com/#/).
 
 * [Marker](#marker)
 * [AutoComplete](#autocomplete)
@@ -74,77 +68,88 @@ Here a list of the available components that you can use with this plugin, click
 * [Polygon](#polygon)
 * [Polyline](#polyline)
 
-
 #### Marker
 
 The Google Map Marker element require to be inside a `<google-map>` component., it support the __default slot__.
 
-```html
-<google-map-marker
-  title="String"
-  label="String|Object"
-  clickable="Boolean"
-  draggable="Boolean"
-  visible="Boolean"
-  z-index="Number"
-  click="Function"
-  dblclick="Function"
-  rightclick="Function"
-  drag="Function"
-  dragstart="Function"
-  dragend="Function"
-  mouseup="Function"
-  mousedown="Function"
-  mouseover="Function"
-  mouseout="Function"
-></google-map-marker>
+```vue
+
+<template>
+  <google-map-marker
+      title="String"
+      label="String|Object"
+      clickable="Boolean"
+      draggable="Boolean"
+      visible="Boolean"
+      z-index="Number"
+      click="Function"
+      dblclick="Function"
+      rightclick="Function"
+      drag="Function"
+      dragstart="Function"
+      dragend="Function"
+      mouseup="Function"
+      mousedown="Function"
+      mouseover="Function"
+      mouseout="Function"
+  />
+</template>
 ```
 
 #### AutoComplete
 
-The AutoComplete component does not require to be inside a `<google-map>` component, it can be used anyway inside your app. It display an input and optionally the autocomplete controls, when a place is selected the __place-changed__ event is triggered with the result.
+The AutoComplete component does not require to be inside a `<google-map>` component, it can be used anyway inside your
+app. It display an input and optionally the autocomplete controls, when a place is selected the __place-changed__ event
+is triggered with the result.
 
-```html
-<google-map-autocomplete
-  model="String"
-  types="Array"
-  controls="Boolean"
-  update-map="Boolean"
-  place-changed="Function"
-></google-map-autocomplete>
+```vue
+
+<template>
+  <google-map-autocomplete
+      model="String"
+      types="Array"
+      controls="Boolean"
+      update-map="Boolean"
+      place-changed="Function"
+  />
+</template>
 ```
 
 ##### Update V 0.0.6
-````html
-<template lang="html">
+
+````vue
+
+<template>
   <div class="info-windows">
     <google-map id="map" ref="Map">
       <google-map-marker
-        :key="index"
-        v-for="(infowindow, index) in infoWindowsList"
-        :position="infowindow.position"
-        @click="toggleInfoWindow(infowindow)"
-      ></google-map-marker>
+          :key="index"
+          v-for="(infoWindow, index) in infoWindowsList"
+          :position="infoWindow.position"
+          :key="index"
+          @click="toggleInfoWindow(infoWindow)"
+      />
       <google-map-infowindow
-              :position="infoWIndowContext.position"
-              :show.sync="showInfo"
-              :options="{maxWidth: 300}"
-              @info-window-clicked="infoClicked"
+          :position="infoWIndowContext.position"
+          :show.sync="showInfo"
+          :options="{maxWidth: 300}"
+          @info-window-clicked="infoClicked"
       >
-        <h4>{{infoWIndowContext.title}}</h4>
-        <p>{{infoWIndowContext.description}}</p>
+        <h4>{{infoWindowContext.title}}</h4>
+        <p>{{infoWindowContext.description}}</p>
       </google-map-infowindow>
     </google-map>
   </div>
 </template>
 
 <script>
-import cities from '../assets/cities.json'
+import cities from '~/assets/cities.json'
+
 export default {
-  data () {
+  data() {
     return {
       showInfo: false,
-      infoWIndowContext: {
+      infoWindowContext: {
         position: {
           lat: 44.2899,
           lng: 11.8774
@@ -154,7 +159,7 @@ export default {
     }
   },
   methods: {
-    toggleInfoWindow (context) {
+    toggleInfoWindow(context) {
       this.infoWIndowContext = context
       this.showInfo = true
     },
@@ -167,6 +172,7 @@ export default {
 ````
 
 ## Added
+
 ### @info-window-clicked($event) to info-windows
 
 ---
@@ -193,6 +199,9 @@ VUE_APP_GOOGLE_APIKEY=my-apy-key
 This package is under the [MIT License](LICENSE).
 
 [npm-image]: https://badge.fury.io/js/vuejs-google-maps.svg
+
 [npm-url]: https://npmjs.org/package/vuejs-google-maps
+
 [daviddm-image]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg?theme=shields.io
+
 [daviddm-url]: https://david-dm.org/chantouchsek/vuejs-google-maps.svg

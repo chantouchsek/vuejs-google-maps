@@ -1,10 +1,10 @@
 <template>
     <div class="vue-google-map">
-        <div ref="map" class="map-view"></div>
+        <div ref="map" class="map-view" />
         <div class="hidden-content">
-            <slot></slot>
+            <slot />
         </div>
-        <slot name="visible"></slot>
+        <slot name="visible" />
     </div>
 </template>
 
@@ -71,13 +71,11 @@ const redirectedEvents = [
 
 export default {
   name: 'GoogleMap',
-
   mixins: [
     Ready,
     BoundProps,
     Events
   ],
-
   props: {
     center: {
       type: [String, Object, Array],
@@ -107,14 +105,11 @@ export default {
   beforeCreate () {
     this.$_mapPromises = []
   },
-
   googleMapsReady () {
     const element = this.$refs.map
-
     // Fallback to global options when props are not defined
     const { options, ...propOpts } = this.$props
     const mapOptions = assignDefined(this.$googleMap, options, propOpts)
-
     // Create the map
     this.$_map = new window.google.maps.Map(element, mapOptions)
     this.bindProps(this.$_map, boundProps)

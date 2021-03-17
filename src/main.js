@@ -17,8 +17,8 @@ Vue.use(VueGoogleMap, {
       'places',
       'visualization'
     ],
-    // language: 'ru',
-    // region: 'RU'
+    language: 'kh',
+    region: 'KH'
   }
 })
 
