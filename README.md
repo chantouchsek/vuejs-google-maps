@@ -23,6 +23,7 @@ obtained your key, import the module in your application and register it as plug
 ```js
 import Vue from 'vue'
 import VueGoogleMap from 'vuejs-google-maps'
+import 'vuejs-google-maps/dist/vuejs-google-maps.css'
 
 Vue.use(VueGoogleMap, {
     load: {

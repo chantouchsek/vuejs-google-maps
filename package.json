@@ -1,7 +1,7 @@
 {
   "name": "vuejs-google-maps",
   "description": "A set of Google Map components for VueJs",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "main": "./dist/vuejs-google-maps.umd.js",
   "types": "types/index.d.ts",
@@ -60,7 +60,8 @@
     "terser": "3.14.1",
     "vue-material": "1.0.0-beta-11",
     "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "vuejs-google-maps": "^0.0.12"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
