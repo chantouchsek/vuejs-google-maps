@@ -59,7 +59,7 @@ events.
 Here a list of the available components that you can use with this plugin, click on them to discover more about the
 usage and see examples. If you are interested to see a __real life use__ checkout
 the [example](https://github.com/chantouchsek/vuejs-google-maps/tree/master/demo) folder which contains the source code
-of the [website](http://vuejs-google-maps.bookingkh.com/#/).
+of the [website](https://google-maps.chantouch.me).
 
 * [Marker](#marker)
 * [AutoComplete](#autocomplete)

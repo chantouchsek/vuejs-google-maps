@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import 'vuejs-google-maps/dist/vuejs-google-maps.css'
 
 import VueGoogleMap from '../lib'
 

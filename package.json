@@ -32,7 +32,7 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vuejs-google-maps ./lib/index.js",
-    "build:demo": "vue-cli-service build --mode demo --dest demo",
+    "build:demo": "vue-cli-service build --dest demo",
     "publish:demo": "git subtree push --prefix demo origin gh-pages",
     "lint": "vue-cli-service lint ./lib",
     "test:unit": "vue-cli-service test:unit",
