@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 
-module.exports = function nuxtVueWaitingModule(moduleOptions) {
+module.exports = function nuxtGoogleMapsModule(moduleOptions) {
     const options = Object.assign({}, this.options.googleMaps, moduleOptions);
     // Register plugin
     this.addPlugin({
