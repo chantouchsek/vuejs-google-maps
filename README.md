@@ -43,10 +43,10 @@ export default {
         // Simple usage
         'vuejs-google-maps/nuxt',
         // Passing options in module configuration
-        ['vuejs-google-maps/nuxt', {api: 'xxxxxx', libraries: [/* rest of libraries */]}]
+        ['vuejs-google-maps/nuxt', {apiKey: 'xxxxxx', libraries: [/* rest of libraries */]}]
     ],
     // Passing options in module top level configuration
-    googleMaps: {api: 'xxxxxx', libraries: [/* rest of libraries */]}
+    googleMaps: {apiKey: 'xxxxxx', libraries: [/* rest of libraries */]}
 }
 ```
 
