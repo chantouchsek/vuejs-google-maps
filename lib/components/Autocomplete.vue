@@ -19,7 +19,7 @@
 
     <div class="pac-input-container">
       <slot name="before-input"></slot>
-      <input id="pac-input" type="text" :value="model" @input="onInputChange" :placeholder="placeholder">
+      <input ref="input" type="text" :value="model" @input="onInputChange" :placeholder="placeholder">
       <slot name="after-input"></slot>
     </div>
   </div>
@@ -108,8 +108,7 @@ export default {
   },
 
   googleMapsReady () {
-    let input = this.$el.querySelector('#pac-input')
-    this.$_autocomplete = new window.google.maps.places.Autocomplete(input)
+    this.$_autocomplete = new window.google.maps.places.Autocomplete(this.$refs.input)
     this.$_autocomplete.setTypes(this.$props.types)
 
     if (this.$_map) {
