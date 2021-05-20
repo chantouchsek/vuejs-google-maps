@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="pac-card">
     <div class="pac-controls-container" v-if="controls">
       <slot name="controls" :types="localTypes">
@@ -41,7 +41,6 @@ const redirectedMethods = [
 
 export default {
   name: 'GoogleMapAutocomplete',
-
   mixins: [
     BoundProps,
     Events,
@@ -140,13 +139,11 @@ export default {
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    font-family: Roboto;
+    font-family: Roboto,sans-serif;
     z-index: 1;
     position: absolute;
     right: 40px;
     margin-right: 10px;
-    position: absolute;
-    right: 40px;
     top: 10px;
     display: flex;
   }
