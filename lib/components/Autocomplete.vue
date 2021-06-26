@@ -16,11 +16,10 @@
         </div>
       </slot>
     </div>
-
     <div class="pac-input-container">
-      <slot name="before-input"></slot>
-      <input ref="input" type="text" :value="model" @input="onInputChange" :placeholder="placeholder">
-      <slot name="after-input"></slot>
+      <slot name="before-input" />
+      <input ref="input" type="text" v-model="autocompleteModel" @input="onInputChange" :placeholder="placeholder">
+      <slot name="after-input" />
     </div>
   </div>
 </template>
@@ -47,8 +46,8 @@ export default {
     FindElement,
     Ready
   ],
-
   props: {
+    value: null,
     model: String,
     placeholder: {
       type: String,
@@ -67,13 +66,21 @@ export default {
       default: true
     }
   },
-
+  computed: {
+    autocompleteModel: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  },
   data () {
     return {
       localTypes: this.$props.types
     }
   },
-
   methods: {
     ...redirectMethods({
       target () {
@@ -85,12 +92,10 @@ export default {
       this.$emit('update:model', event.target.value)
     }
   },
-
   watch: {
     localTypes: 'setTypes',
     types: 'setTypes'
   },
-
   created () {
     const mapAncestor = this.$_findAncestor(
       a => a.$options.name === 'GoogleMap'
@@ -100,12 +105,10 @@ export default {
     }
     this.$_mapAncestor = mapAncestor
   },
-
   async googleMapsPrepare () {
     const mapComp = this.$_mapAncestor
     this.$_map = mapComp ? await mapComp.$_getMap() : null
   },
-
   googleMapsReady () {
     this.$_autocomplete = new window.google.maps.places.Autocomplete(this.$refs.input)
     this.$_autocomplete.setTypes(this.$props.types)

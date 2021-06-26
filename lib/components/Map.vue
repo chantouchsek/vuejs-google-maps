@@ -1,5 +1,6 @@
 <template>
     <div class="vue-google-map">
+      <slot name="before" />
         <div ref="map" class="map-view" />
         <div class="hidden-content">
             <slot />
