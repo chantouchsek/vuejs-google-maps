@@ -64,6 +64,10 @@ export default {
     updateMap: {
       type: Boolean,
       default: true
+    },
+    options: {
+      type: Object,
+      default: () => ({})
     }
   },
   computed: {
@@ -110,7 +114,10 @@ export default {
     this.$_map = mapComp ? await mapComp.$_getMap() : null
   },
   googleMapsReady () {
-    this.$_autocomplete = new window.google.maps.places.Autocomplete(this.$refs.input)
+    this.$_autocomplete = new window.google.maps.places.Autocomplete(
+      this.$refs.input,
+      this.$props.options
+    )
     this.$_autocomplete.setTypes(this.$props.types)
 
     if (this.$_map) {
