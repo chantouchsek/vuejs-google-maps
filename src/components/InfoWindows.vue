@@ -3,20 +3,20 @@
     <google-map id="map" ref="Map">
       <google-map-marker
         :key="index"
-        v-for="(infowindow, index) in infoWindowsList"
-        :position="infowindow.position"
-        @click="toggleInfoWindow(infowindow)"
-      ></google-map-marker>
+        v-for="(info, index) in infoWindowsList"
+        :position="info.position"
+        @click="toggleInfoWindow(info)"
+      />
       <google-map-infowindow
-              v-for="(infowindow, index) in infoWindowsList"
+              v-for="(info, index) in infoWindowsList"
               :key="`info-window-${index}`"
-              :position="infowindow.position"
+              :position="info.position"
               :show.sync="showInfo"
               :options="{maxWidth: 300}"
-              @info-window-clicked="infoClicked($event, infowindow)"
+              @info-window-clicked="infoClicked($event, info)"
       >
-        <h4 >{{infoWIndowContext.title}}</h4>
-        <p>{{infoWIndowContext.description}}</p>
+        <h4 >{{infoWindowContext.title}}</h4>
+        <p>{{infoWindowContext.description}}</p>
       </google-map-infowindow>
     </google-map>
   </div>
@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       showInfo: true,
-      infoWIndowContext: {
+      infoWindowContext: {
         title: 'Hello world',
         description: 'Description',
         position: {
@@ -41,11 +41,11 @@ export default {
   },
   methods: {
     toggleInfoWindow (context) {
-      this.infoWIndowContext = context
+      this.infoWindowContext = context
       this.showInfo = true
     },
     infoClicked(context, spot) {
-      console.log(context, spot)
+      console.log('infoClicked', context, spot)
     }
   }
 }
