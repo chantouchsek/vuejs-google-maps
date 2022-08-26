@@ -11822,9 +11822,9 @@ vue-material@1.0.0-beta-15:
     vue-toc "0.0.1"
 
 vue-router@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.1.tgz#edf3cf4907952d1e0583e079237220c5ff6eb6c9"
-  integrity sha512-RRQNLT8Mzr8z7eL4p7BtKvRaTSGdCbTy2+Mm5HTJvLGYSSeG9gDzNasJPP/yOYKLy+/cLG/ftrqq5fvkFwBJEw==
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.6.4.tgz#46b77eca93cd69f6840c4730b13976a130144ecc"
+  integrity sha512-QSJs5aKKPiwBH++gelVbnq0ZFbUZXjlsjAklUM+F8dtd49YY72QsD1uGpBk/cqLK1bkZ8HiqPjS8NkhaGtpqHw==
 
 vue-style-loader@^4.1.0:
   version "4.1.3"
