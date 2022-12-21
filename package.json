@@ -39,7 +39,7 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
